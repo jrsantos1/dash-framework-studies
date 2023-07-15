@@ -2,8 +2,7 @@ from dash import dcc, html
 import dash_bootstrap_components as dbc
 
 
-layout = dbc.Container(children=[
-
+login = dbc.Container(children=[
   html.Div(
       children=[
           html.Div([
@@ -14,7 +13,7 @@ layout = dbc.Container(children=[
                     dbc.Input(id='login_user', required=True),
                     html.Label(['Senha']),
                     dbc.Input(id='pass_user', type='password', required=True),
-                      dbc.Button(children='Logar', id='btn_login', className='w-100 mt-3')
+                      dbc.NavLink(children='Logar', id='btn_login', href='/home',className='w-100 mt-3')
                   ])]
               ),
           ], className='w-25 h-50 bg-danger mt-5'
